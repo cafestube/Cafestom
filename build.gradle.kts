@@ -117,8 +117,8 @@ tasks {
     }
 
     nexusPublishing{
-        useStaging.set(true)
-        this.packageGroup.set("net.minestom")
+        useStaging.set(false)
+        this.packageGroup.set("eu.cafestube.cafestom")
 
         transitionCheckOptions {
             maxRetries.set(360) // 1 hour
@@ -126,8 +126,8 @@ tasks {
         }
 
         repositories.sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            nexusUrl.set(uri("https://repo.cafestu.be"))
+            snapshotRepositoryUrl.set(uri("https://repo.cafestu.be/repository/maven-public/"))
 
             if (System.getenv("SONATYPE_USERNAME") != null) {
                 username.set(System.getenv("SONATYPE_USERNAME"))
@@ -137,7 +137,7 @@ tasks {
     }
 
     publishing.publications.create<MavenPublication>("maven") {
-        groupId = "net.minestom"
+        groupId = "eu.cafestube.cafestom"
         // todo: decide on publishing scheme
         artifactId = if (channel == "snapshot") "minestom-snapshots" else "minestom-snapshots"
         version = project.version.toString()
@@ -186,13 +186,13 @@ tasks {
         }
     }
 
-    signing {
-        isRequired = System.getenv("CI") != null
-
-        val privateKey = System.getenv("GPG_PRIVATE_KEY")
-        val keyPassphrase = System.getenv()["GPG_PASSPHRASE"]
-        useInMemoryPgpKeys(privateKey, keyPassphrase)
-
-        sign(publishing.publications)
-    }
+//    signing {
+//        isRequired = System.getenv("CI") != null
+//
+//        val privateKey = System.getenv("GPG_PRIVATE_KEY")
+//        val keyPassphrase = System.getenv()["GPG_PASSPHRASE"]
+//        useInMemoryPgpKeys(privateKey, keyPassphrase)
+//
+//        sign(publishing.publications)
+//    }
 }
