@@ -24,6 +24,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven(url = "https://repo.cafestu.be/repository/maven-public/")
     }
 
     configurations.all {
@@ -70,6 +71,7 @@ dependencies {
     api(libs.jetbrainsAnnotations)
     api(libs.bundles.adventure)
     implementation(libs.minestomData)
+    api(libs.dependencyGetter)
 
     // Performance/data structures
     implementation(libs.caffeine)

@@ -7,6 +7,7 @@ data = "1.20.5-rv3"
 adventure = "4.17.0"
 jetbrainsAnnotations = "23.0.0"
 slf4j = "2.0.7"
+dependencyGetter = "v1.0.1"
 
 # Performance / Data Structures
 caffeine = "3.1.6"
@@ -47,6 +48,7 @@ adventure-text-logger-slf4j = { group = "net.kyori", name = "adventure-text-logg
 minestomData = { group = "net.minestom", name = "data", version.ref = "data" }
 jetbrainsAnnotations = { group = "org.jetbrains", name = "annotations", version.ref = "jetbrainsAnnotations" }
 slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j"}
+dependencyGetter = { group = "com.github.Minestom", name = "DependencyGetter", version.ref = "dependencyGetter" }
 
 # Performance / Data Structures
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version.ref = "caffeine" }
