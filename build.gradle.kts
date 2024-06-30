@@ -129,7 +129,7 @@ tasks {
 
         repositories.sonatype {
             nexusUrl.set(uri("https://repo.cafestu.be"))
-            snapshotRepositoryUrl.set(uri("https://repo.cafestu.be/repository/maven-public/"))
+            snapshotRepositoryUrl.set(uri("https://repo.cafestu.be/maven-public/"))
 
             if (System.getenv("SONATYPE_USERNAME") != null) {
                 username.set(System.getenv("SONATYPE_USERNAME"))
@@ -137,7 +137,6 @@ tasks {
             }
         }
     }
-
     publishing.publications.create<MavenPublication>("maven") {
         groupId = "eu.cafestube.cafestom"
         // todo: decide on publishing scheme
