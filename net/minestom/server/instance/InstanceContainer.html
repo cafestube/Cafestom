@@ -909,7 +909,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Gets the last time at which a block changed.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the time at which the last block changed in milliseconds, 0 if never</dd>
+<dd>the time at which the last block changed in nanoseconds. Only use this to calculate delta times</dd>
 </dl>
 </div>
 </section>
@@ -1020,7 +1020,7 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code><a href="Instance.html#tick(long)">tick</a></code>&nbsp;in class&nbsp;<code><a href="Instance.html" title="class in net.minestom.server.instance">Instance</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>time</code> - the tick time in milliseconds</dd>
+<dd><code>time</code> - the tick time in milliseconds, which may only be used as a delta and has no meaning in real life</dd>
 </dl>
 </div>
 </section>

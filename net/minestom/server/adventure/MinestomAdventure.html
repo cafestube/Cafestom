@@ -75,6 +75,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#tagStringIO()" tabindex="0">tagStringIO()</a></li>
 <li><a href="#getDefaultLocale()" tabindex="0">getDefaultLocale()</a></li>
 <li><a href="#setDefaultLocale(java.util.Locale)" tabindex="0">setDefaultLocale(Locale)</a></li>
+<li><a href="#wrapNbt(net.kyori.adventure.nbt.BinaryTag)" tabindex="0">wrapNbt(BinaryTag)</a></li>
+<li><a href="#unwrapNbt(net.kyori.adventure.nbt.api.BinaryTagHolder)" tabindex="0">unwrapNbt(BinaryTagHolder)</a></li>
 </ol>
 </li>
 </ol>
@@ -148,6 +150,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Gets the <code>TagStringIO</code> instance used to convert SNBT.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @NotNull net.kyori.adventure.nbt.BinaryTag</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#unwrapNbt(net.kyori.adventure.nbt.api.BinaryTagHolder)" class="member-name-link">unwrapNbt</a><wbr>(@NotNull <a href="https://javadoc.io/doc/net.kyori/adventure-api/4.23.0/net/kyori/adventure/nbt/api/BinaryTagHolder.html" title="class or interface in net.kyori.adventure.nbt.api" class="external-link">BinaryTagHolder</a>&nbsp;holder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @NotNull <a href="https://javadoc.io/doc/net.kyori/adventure-api/4.23.0/net/kyori/adventure/nbt/api/BinaryTagHolder.html" title="class or interface in net.kyori.adventure.nbt.api" class="external-link">BinaryTagHolder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrapNbt(net.kyori.adventure.nbt.BinaryTag)" class="member-name-link">wrapNbt</a><wbr>(@NotNull net.kyori.adventure.nbt.BinaryTag&nbsp;nbt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -240,6 +248,26 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>defaultLocale</code> - the new default, or <code>null</code> to return to <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Locale.html#getDefault()" title="class or interface in java.util" class="external-link"><code>Locale.getDefault()</code></a></dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="wrapNbt(net.kyori.adventure.nbt.BinaryTag)">
+<h3>wrapNbt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@NotNull <a href="https://javadoc.io/doc/net.kyori/adventure-api/4.23.0/net/kyori/adventure/nbt/api/BinaryTagHolder.html" title="class or interface in net.kyori.adventure.nbt.api" class="external-link">BinaryTagHolder</a></span>&nbsp;<span class="element-name">wrapNbt</span><wbr><span class="parameters">(@NotNull
+ @NotNull net.kyori.adventure.nbt.BinaryTag&nbsp;nbt)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="unwrapNbt(net.kyori.adventure.nbt.api.BinaryTagHolder)">
+<h3>unwrapNbt</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@NotNull net.kyori.adventure.nbt.BinaryTag</span>&nbsp;<span class="element-name">unwrapNbt</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://javadoc.io/doc/net.kyori/adventure-api/4.23.0/net/kyori/adventure/nbt/api/BinaryTagHolder.html" title="class or interface in net.kyori.adventure.nbt.api" class="external-link">BinaryTagHolder</a>&nbsp;holder)</span></div>
 </div>
 </section>
 </li>

@@ -84,6 +84,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#ITEM_STACK" tabindex="0">ITEM_STACK</a></li>
 <li><a href="#ITEM_PREDICATE" tabindex="0">ITEM_PREDICATE</a></li>
 <li><a href="#COLOR" tabindex="0">COLOR</a></li>
+<li><a href="#HEX_COLOR" tabindex="0">HEX_COLOR</a></li>
 <li><a href="#COMPONENT" tabindex="0">COMPONENT</a></li>
 <li><a href="#STYLE" tabindex="0">STYLE</a></li>
 <li><a href="#MESSAGE" tabindex="0">MESSAGE</a></li>
@@ -121,6 +122,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#LOOT_TABLE" tabindex="0">LOOT_TABLE</a></li>
 <li><a href="#LOOT_PREDICATE" tabindex="0">LOOT_PREDICATE</a></li>
 <li><a href="#LOOT_MODIFIER" tabindex="0">LOOT_MODIFIER</a></li>
+<li><a href="#DIALOG" tabindex="0">DIALOG</a></li>
 <li><a href="#UUID" tabindex="0">UUID</a></li>
 </ol>
 </li>
@@ -201,25 +203,29 @@ implements <a href="../registry/StaticProtocolObject.html" title="interface in n
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code><a href="#COMPONENT" class="member-name-link">COMPONENT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#DIMENSION" class="member-name-link">DIMENSION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DIALOG" class="member-name-link">DIALOG</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#DOUBLE" class="member-name-link">DOUBLE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#DIMENSION" class="member-name-link">DIMENSION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#ENTITY" class="member-name-link">ENTITY</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DOUBLE" class="member-name-link">DOUBLE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#ENTITY_ANCHOR" class="member-name-link">ENTITY_ANCHOR</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ENTITY" class="member-name-link">ENTITY</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#FLOAT" class="member-name-link">FLOAT</a></code></div>
+<div class="col-first even-row-color"><code><a href="#ENTITY_ANCHOR" class="member-name-link">ENTITY_ANCHOR</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#FLOAT_RANGE" class="member-name-link">FLOAT_RANGE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#FLOAT" class="member-name-link">FLOAT</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#FUNCTION" class="member-name-link">FUNCTION</a></code></div>
+<div class="col-first even-row-color"><code><a href="#FLOAT_RANGE" class="member-name-link">FLOAT_RANGE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#GAME_PROFILE" class="member-name-link">GAME_PROFILE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#FUNCTION" class="member-name-link">FUNCTION</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#GAMEMODE" class="member-name-link">GAMEMODE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#GAME_PROFILE" class="member-name-link">GAME_PROFILE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#HEIGHTMAP" class="member-name-link">HEIGHTMAP</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#GAMEMODE" class="member-name-link">GAMEMODE</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#HEIGHTMAP" class="member-name-link">HEIGHTMAP</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#HEX_COLOR" class="member-name-link">HEX_COLOR</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#INT_RANGE" class="member-name-link">INT_RANGE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -503,6 +509,14 @@ the order they are declared.</div>
 <h3>COLOR</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ArgumentParserType.html" title="enum class in net.minestom.server.command">ArgumentParserType</a></span>&nbsp;<span class="element-name">COLOR</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="HEX_COLOR">
+<h3>HEX_COLOR</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ArgumentParserType.html" title="enum class in net.minestom.server.command">ArgumentParserType</a></span>&nbsp;<span class="element-name">HEX_COLOR</span></div>
 </div>
 </section>
 </li>
@@ -799,6 +813,14 @@ the order they are declared.</div>
 <h3>LOOT_MODIFIER</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ArgumentParserType.html" title="enum class in net.minestom.server.command">ArgumentParserType</a></span>&nbsp;<span class="element-name">LOOT_MODIFIER</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="DIALOG">
+<h3>DIALOG</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="ArgumentParserType.html" title="enum class in net.minestom.server.command">ArgumentParserType</a></span>&nbsp;<span class="element-name">DIALOG</span></div>
 </div>
 </section>
 </li>
