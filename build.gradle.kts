@@ -125,9 +125,9 @@ tasks {
         }
     }
     publishing.publications.create<MavenPublication>("maven") {
-        groupId = "net.minestom"
+        groupId = "net.cafestube.cafestom"
         // todo: decide on publishing scheme
-        artifactId = if (channel == "snapshot") "minestom-snapshots" else "minestom-snapshots"
+        artifactId = if (channel == "snapshot") "cafestom-snapshots" else "cafestom-snapshots"
         version = project.version.toString()
 
         from(project.components["java"])
@@ -174,13 +174,13 @@ tasks {
         }
     }
 
-    signing {
-        isRequired = System.getenv("CI") != null
-
-        val privateKey = System.getenv("GPG_PRIVATE_KEY")
-        val keyPassphrase = System.getenv()["GPG_PASSPHRASE"]
-        useInMemoryPgpKeys(privateKey, keyPassphrase)
-
-        sign(publishing.publications)
-    }
+//    signing {
+//        isRequired = System.getenv("CI") != null
+//
+//        val privateKey = System.getenv("GPG_PRIVATE_KEY")
+//        val keyPassphrase = System.getenv()["GPG_PASSPHRASE"]
+//        useInMemoryPgpKeys(privateKey, keyPassphrase)
+//
+//        sign(publishing.publications)
+//    }
 }
