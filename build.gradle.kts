@@ -6,7 +6,6 @@ plugins {
 
     `maven-publish`
     signing
-    alias(libs.plugins.nexuspublish)
 }
 
 // Read env vars (used for publishing generally)
@@ -19,7 +18,7 @@ val shortDescription = "1.21 Lightweight Minecraft server"
 allprojects {
     apply(plugin = "java")
 
-    group = "net.minestom"
+    group = "net.cafestube.cafestom"
     version = rootProject.version
     description = shortDescription
 
@@ -118,26 +117,13 @@ tasks {
         }
     }
 
-    nexusPublishing {
-        useStaging.set(true)
-        this.packageGroup.set("net.minestom")
-
-        transitionCheckOptions {
-            maxRetries.set(360) // 1 hour
-            delayBetween.set(Duration.ofSeconds(10))
-        }
-
-        repositories.sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-
-            if (System.getenv("SONATYPE_USERNAME") != null) {
-                username.set(System.getenv("SONATYPE_USERNAME"))
-                password.set(System.getenv("SONATYPE_PASSWORD"))
-            }
+    publishing.repositories {
+        maven {
+            name = "cafestubeRepository"
+            credentials(PasswordCredentials::class)
+            url = uri("https://repo.cafestube.net/maven-snapshots/")
         }
     }
-
     publishing.publications.create<MavenPublication>("maven") {
         groupId = "net.minestom"
         // todo: decide on publishing scheme
